@@ -1,0 +1,142 @@
+.App {
+    text-align: center;
+  }
+  *  {
+   background-color: rgb(215, 224, 231);
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  button {
+   background-color: #444141;
+   border-radius: 4px;
+   color: #fff;
+   cursor: pointer;
+   padding: 15px 30px;
+   font-size: 18px;
+   font-weight: bold;
+   letter-spacing: 1px;
+   border: none;
+  }
+  
+  button:hover {
+   background-image: linear-gradient(90deg, #53cbef 0%, #dcc66c 50%, #ffa3b6 75%, #53cbef 100%);
+   animation: slidernbw 5s linear infinite;
+   color: #000;
+  }
+  
+  @keyframes slidernbw {
+   to {
+    background-position: 20vw;
+   }
+  }
+  .App2{
+    display: Flex;  
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    color: antiquewhite;
+    justify-content: center;
+  }
+  .card{
+    border: 2px solid black;
+    justify-content: space-between;
+    display: flex;
+    flex-direction:column;
+    margin: 4.5%;
+    color: blueviolet;
+    
+  
+  }
+  .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden; /* Hide any overflow */
+    color: aqua; 
+  }
+  
+  .carousel-inner,
+  .carousel-item {
+     /* Use flexbox to center the images vertically */
+    align-items: center; /* Vertically center the images */
+    justify-content: center; /* Horizontally center the images */
+    max-height: 700px; /* Set the maximum height for the carousel items */
+  }
+  .btn   {
+    background-color: rgb(238, 241, 59);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+  .carousel-item img {
+    object-fit: contain; /* Ensure the image scales appropriately to fit the container */
+    max-height: 100%; /* Set the maximum height of the image to the height of the carousel item */
+    max-width: 100%; /* Set the maximum width of the image to the width of the carousel item */
+  }
+  .header{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(145, 59, 225)9, 225);
+  }
+  .nav_links{
+    list-style: none;
+    text-decoration: none;
+    
+  
+  }
+  .mainsearch{
+    width: 700px;
+  }
+  
+  .nav_links li {
+    display: inline-block;
+    padding:0 20px ;
+  }
+  .detailcard{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid black; 
+    justify-content:first baseline;
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #1a4b58;
+  }
+  .footer     {
+    background-color: bisque;
+  color: #1a4b58;
+  }
+  .fot   {
+     background-color: aquamarine;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -24,7 +24,7 @@ function Details() {
              <img src={details.image} alt={details.product_name} height="200px" width="300px" /></div>
                <div className="dproductdetails">
                <h3 style={{textAlign:"left"}}>{details.product_name}</h3>
-                <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
+               <p> {details.description}</p>
                 <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
               <strike><h3 style={{textAlign:"left"}}>₹{details.old_price}</h3></strike>
               <h3 style={{textAlign:"left"}}>₹{details.company_name}</h3>

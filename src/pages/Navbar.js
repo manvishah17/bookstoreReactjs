@@ -1,53 +1,53 @@
-// nav.js
-import React, { useState } from "react";
+
+import React, { useContext, useState } from "react";
 import '../App.css';
 import { Link } from "react-router-dom";
 import Category from "./category";
-function Nav() {
-  const [ searchtext, setSearchinput ] = useState("");
-  function sendvalue(e){
-    setSearchinput(e.target.value);}
-  return (
-    <div className="header">
-      <Link to="/"><h1>BOOKWORLD</h1></Link>
-      <form className="search">
-        <input  className="mainsearch" placeholder="What's on your mind" type="search" name="search" value={searchtext} onChange={sendvalue}/>
-       
-        {/* <Link to={`/Search/${searchtext}`}><button type="submit">What's on your mind</button></Link> */}
-      
-      </form>
-      <nav>
-          <ul className="nav_links">
-            {/* <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/book">books</Link>
-            </li> */}
-            <li>
-              <Link to="/category">category</Link>
-            </li>
-             <li>
-             <select name="book" id="category">
-                        <option value=""> All</option>
-                        <option value="horror"> Horror</option>
-                        <option value="thriller"> Thriller</option>
-                        <option value="history">History </option>
-                        <option value="inspirational">Inspirational </option>
-                    
-                    </select> 
+import Cart from "./Cart";
+import { UserContext } from "./UserContext";
+function Nav() { 
+  const { setUserInfo , userInfo } = useContext (UserContext)
+  const [searchtext, setSearchinput] = useState("");
+  const username = userInfo?.username
+  function logout() {
+    fetch('http://localhost:4000/logout', {
+      credentials: 'include',
+      method: 'POST'
+    })
+    setUserInfo(null)
+  }
+return (
+  <div className="header">
+    <h1>BOOKWORLD</h1>
+    {/* <form className="search">
+      <input className="mainsearch" placeholder="  What's on your mind" type="search" name="search" value={searchtext} onChange={sendvalue} />
 
+    </form> */}
+    <nav>
+      {username && (
+        <>
+          <Link to='/create'>Create new post</Link>
+          <a onClick={logout}>Logout</a>
+        </>
+      )}
+      {!username && (
+        <>
+          <Link to="/login">Login</Link>
+          <Link to="/register" >Register</Link>
+        </>
+      )}
+      <ul className="nav_links">
 
-            </li> 
-
-            
-          </ul>
-          
-
-        </nav>
-     
-    </div>
-  );
-}
-
+        <li>
+          <Link to="/category" className="category-link">Category</Link>
+          <Link to="/Cart">Cart</Link>
+          <button type="submit" onClick={logout}>Logout</button>
+          <Link to="/login">login</Link>
+          <Link to="/signup">signup</Link>
+        </li>
+      </ul>
+    </nav>
+  </div>
+);
+      }
 export default Nav;
