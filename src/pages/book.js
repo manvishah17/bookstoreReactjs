@@ -24,9 +24,9 @@ function Book() {
   }
 
   return (
-    <>
-
-      <Carousel
+    <div className="CONTAINER"> 
+      <Carousel 
+      className='carousel'
         interval={1500}
         pause="hover"
         wrap={true}
@@ -36,7 +36,7 @@ function Book() {
           <Carousel.Item key={item.product_id}>
             <Link to={`/Details/${item.product_id}`}>
               <img
-                className="d-block w-100"
+                className="d-block w-100 caro" 
                 src={item.image}
                 alt={item.product_name}
                 height="500px"
@@ -64,7 +64,7 @@ function Book() {
         ))}
       </div>
       
-    </>
+    </div>
   );
 }
 

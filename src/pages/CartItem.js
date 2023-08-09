@@ -39,11 +39,11 @@ function CartItem({ item }) {
         <h3>{item.product_name}</h3>
         <p>Price: ₹{item.price}</p>
         <div className="quantity">
-          <button onClick={decreaseQuantity}>-</button>
-          <span>{item.quantity}</span>
-          <button onClick={increaseQuantity}>+</button>
+          <button  className="add" onClick={decreaseQuantity}>-</button>
+          <span  className="add">{item.quantity}</span>
+          <button   className="add"onClick={increaseQuantity}>+</button>
         </div>
-        <button onClick={removeItem}>Remove</button>
+        <button   className="add1"onClick={removeItem}>Remove</button>
       </div>
     </div>
   );

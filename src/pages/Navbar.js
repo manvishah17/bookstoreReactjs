@@ -31,22 +31,11 @@ function Nav({ products = [] }) {
         />
       </form>
       <nav className="nav_links">
-        {username ? (
-          <> </>
-        ) : (
-          <>
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Signup</Link>
-          </>
-        )}
-        <ul className="nav_links">
-          <li>
-            <Link to="/category" className="category-link">
-              Category
-            </Link>
-            <Link  className=" cart"to="/Cart">Cart</Link>
-          </li>
-        </ul>
+
+        <Link className="links" to="/login">Login</Link>
+        <Link className="links" to="/signup">Signup</Link>
+        <Link to="/category" className="links">Category</Link>
+        <Link className="links" to="/Cart">Cart</Link>
       </nav>
 
       <ul>
