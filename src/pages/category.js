@@ -1,23 +1,23 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import '../App.css';
 import { Link } from "react-router-dom";
+import { CartContext } from './CartContext' ;
+
 import { Carousel } from "react-bootstrap";
 import './category.css'
 function Category() {
+  const { setCart } = useContext(CartContext);
   const [clothesdata, setCothesdata] = useState([]);
-
   const [searchtext, setSearchtext] = useState("");
-
-
-  useEffect(() => {
-    axios
-
-      .get(`http://localhost:3000/api/data?s=books&sub=${searchtext}`)
+  const addToCartHandler = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
+    useEffect(() => {
+    axios.get(`http://localhost:3000/api/data?s=books&sub=${searchtext}`)
       .then((response) => {
-        setCothesdata(response.data);
-      })
-  }, [searchtext])
+      setCothesdata(response.data);
+      }) }, [searchtext])
   function changedvalue(e) {
     setSearchtext(e.target.value);
   }
@@ -62,7 +62,9 @@ function Category() {
             <img src={clothes.image} alt={clothes.product_name} />
             <h3 style={{ textAlign: "left" }}>{clothes.product_name}</h3>
             <h3 style={{ textAlign: "left" }}>₹{clothes.price}</h3>
+           
             <div className="btn"><Link to={`/Details/${clothes.product_id}`}><button type="submit">More details</button></Link></div>
+            <button onClick={() => addToCartHandler(clothes)}>Add to cart</button>
           </div>
         ))}
 

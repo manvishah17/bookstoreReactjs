@@ -29,8 +29,9 @@ function Signup() {
 
   return (
     <form>
-      <h3>Sign Up</h3>
-      <div>
+      <div className='sign'>
+      <h3>Sign Up</h3> </div>
+      <div className='uname'>
         <label>UserName:-</label>
         <input
           type="text"
@@ -40,7 +41,7 @@ function Signup() {
           onChange={handleOnChange}
         />
       </div>
-      <div>
+      <div className='pass'>
         <label>Password:-</label>
         <input
           type="password"
@@ -50,7 +51,7 @@ function Signup() {
           onChange={handleOnChange}
         />
       </div>
-      <div>
+      <div  className='submit'>
         <button type="submit" onClick={handleSubmit}>
           Sign Up
         </button>

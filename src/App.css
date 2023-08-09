@@ -1,22 +1,22 @@
-
 .App {
   text-align: center;
   background-color: #0000ff;
 }
 
 * {
-  content: porder-box ;
+  content: porder-box;
   padding: 0%;
   margin: 0%;
   /* background-color: #fff; */
 }
+
 .mainsearch {
   width: 210px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+  background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
   border-radius: 30px;
   overflow: hidden;
   cursor: pointer;
@@ -76,19 +76,15 @@ button:hover {
 .App2 {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row; */
   text-align: center;
   color: #333;
   justify-content: space-between;
   width: 100%;
 }
+
 .card {
-
-  
-
   padding: 1rem;
   border: 1px solid #ccc;
-  /* Add space between cards */
   margin-bottom: 1rem;
 }
 
@@ -99,53 +95,105 @@ button:hover {
     margin: 0 auto;
     padding: 1rem;
     border: 1px solid #ccc;
-    /* Add space between cards */
     margin-bottom: 1rem;
   }
 
-} 
+}
 
+.address {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.address h6 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.payment input[type="text"],
+.payment input[type="email"],
+.payment textarea {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment textarea {
+  resize: vertical;
+}
+
+.payment button {
+  background-color: #007bff;
+  color: rgb(150, 97, 97);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment button:hover {
+  background-color: #0056b3;
+}
+
+.payment select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.payment select option {
+  padding: 10px;
+}
 
 .carousel {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  overflow: hidden; /* Hide any overflow */
+  overflow: hidden;
   color: #333;
 }
 
 .carousel-inner,
 .carousel-item {
-   /* Use flexbox to center the images vertically */
-  align-items: center; /* Vertically center the images */
-  justify-content: center; /* Horizontally center the images */
-  max-height: 700px; /* Set the maximum height for the carousel items */
+    align-items: center;
+ justify-content: center;
+   max-height: 700px;
+  
 }
-
 .btn {
   background-color: #ffffff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-img{
-height: 350px;
+img {
+  height: 350px;
 
 }
+
 .nav_links {
-   display: flex;
+  display: flex;
 }
+
 .nav_links li {
-list-style: none;
-margin: top;
-padding: 5px;
+  list-style: none;
+  margin: top;
+  padding: 5px;
 }
+
 .carousel-item img {
-  object-fit: contain; /* Ensure the image scales appropriately to fit the container */
-  max-height: 100%; /* Set the maximum height of the image to the height of the carousel item */
-  max-width: 100%; /* Set the maximum width of the image to the width of the carousel item */
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
 }
-.header {
-  background-image: linear-gradient(to right, #007bff, #6c757d); /* Blue to Gray gradient */
+
+ {
+  background-image: linear-gradient(to right, #007bff, #6c757d);
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -154,19 +202,22 @@ padding: 5px;
   align-items: center;
   color: #0b5368;
   background-color: #dcc66c
-  
 }
-.header h1 {
+
+ h1 {
   font-size: 50px;
   font-family: serif;
 }
- Link {
+
+Link {
   text-decoration: none;
 
 }
-.foot   {
-background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
+
+.foot {
+  background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
 }
+
 .footer {
   background-image: linear-gradient(to right, #007bff, #6c757d);
 }
@@ -176,68 +227,55 @@ background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
   text-decoration: none;
   margin-right: 8px;
 }
+
 .foot a:hover {
-  color: #007bff; 
+  color: #007bff;
 }
+
 .foot h6 {
-  color: #811589; /* Blue color for the company name */
+  color: #811589;
   font-weight: bold;
   font-size: larger;
 }
-
-/* Styling for the footer contact info */
 .foot p {
   color: #888;
 }
-
-/* Styling for the footer copyright text */
 .foot p.grey-text {
   color: #777;
 }
-
-/* Styling for the footer social media icons (if any) */
 .foot .fa {
   font-size: 1.3rem;
   margin-right: 10px;
-  color: #007bff; /* Blue color for social media icons */
+  color: #007bff;
 }
-
-/* Media query for smaller screens */
 @media (max-width: 768px) {
   .foot {
     text-align: center;
   }
-  
+
   .foot p {
     margin-bottom: 10px;
   }
 }
-/* nav.css */
 
-/* ... (existing CSS rules) */
-
-.header nav ul {
+ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
 }
 
-.header nav li {
+ nav li {
   margin-left: 20px;
 }
 
-.header nav li a {
+ nav li a {
   text-decoration: none;
   color: #fff;
 }
-
-/* Change color of category link */
-.header nav li a.category-link {
-  color: rgb(0, 255, 145); /* Replace #f00 with your desired color value */
+ nav li a.category-link {
+  color: rgb(0, 255, 145);
 }
-
-
-.header nav li button {
+ nav li button {
   border: none;
   background-color: #fff;
   color: #007bff;
@@ -246,12 +284,10 @@ background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
   cursor: pointer;
 }
 
-.header nav li button:hover {
+ nav li button:hover {
   background-color: #007bff;
   color: #fff;
 }
-
-/* SignIn.css */
 .form-container {
   width: 300px;
   margin: 0 auto;
@@ -260,12 +296,10 @@ background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .form-container h3 {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .form-group {
   margin-bottom: 15px;
 }
@@ -296,7 +330,113 @@ background-image: linear-gradient(to right, #ff6b6b, #ffa07a);
 .form-group button:hover {
   background-color: #0056b3;
 }
+ {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 0 auto;
+}
 
+ h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
+.uname,
+ .pass {
+  margin-bottom: 15px;
+}
 
+ label {
+  display: block;
+  font-weight: bold;
+}
 
+ input[type="text"],
+ input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ button:hover {
+  background-color: #0056b3;
+}
+ .cart {
+  color: #007bff;
+ } 
+ .header  {
+display: flex ;
+justify-content: space-around;
+background-color: #53cbef;
+ }
+ /* Style for the navigation links */
+.nav_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  color: white;
+}
+
+/* Style for the individual navigation links */
+.nav_links a {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+}
+
+/* Style for the "category" link */
+.category-link {
+  font-weight: bold;
+}
+
+/* Style for the cart link */
+.cart {
+  background-color: #ff9900;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Style for the list items in the navigation */
+.nav_links li {
+  list-style: none;
+  display: inline;
+}
+
+/* Style for the login and signup links */
+.nav_links .login,
+.nav_links .signup {
+  font-weight: bold;
+}
+
+/* Style for the active link */
+.nav_links a.active {
+  text-decoration: underline;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .nav_links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav_links li {
+    margin-top: 10px;
+  }
+}

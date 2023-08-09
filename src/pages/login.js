@@ -30,9 +30,9 @@ function SignIn() {
   };
 
   return (
-    <form>
-      <h3>Log In</h3>
-      <div>
+    <form> <div className='login'>
+      <h3>Log In</h3> </div>
+      <div className='uname'>
         <label>Username</label>
         <input
           type="text"
@@ -41,7 +41,7 @@ function SignIn() {
           onChange={handleOnChange}
         />
       </div>
-      <div>
+      <div className='pass'>
         <label>Password</label>
         <input
           type="password"
@@ -50,7 +50,7 @@ function SignIn() {
           onChange={handleOnChange}
         />
       </div>
-      <div>
+      <div className='submit'>
         <button type="submit" onClick={handleSignIn}>
           LOG In
         </button>
