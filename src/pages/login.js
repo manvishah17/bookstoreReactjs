@@ -1,4 +1,3 @@
-// SignIn.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router';
@@ -19,10 +18,16 @@ function SignIn() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/login', credentials);
-      // Handle successful sign-in (e.g., store the token, redirect, etc.)
-      console.log('Successful sign-in:', response.data);
-      alert("welcome User")
-      navigate('/book')
+
+      if (response && response.data) {
+        // Successful sign-in
+        const { userObj, auth } = response.data;
+        localStorage.setItem('user', JSON.stringify(userObj));
+        localStorage.setItem('token', auth);
+        navigate('/');
+      } else {
+        console.error('Invalid response from server');
+      }
 
     } catch (error) {
       console.error('Error signing in:', error.response.data.msg);
@@ -30,31 +35,33 @@ function SignIn() {
   };
 
   return (
-    <form> <div className='login'>
-      <h3>Log In</h3> </div>
-      <div className='uname'>
+    <form>  <div className='login'>
+      <h3>Sign In</h3>
+      <div>
         <label>Username</label>
         <input
           type="text"
+          placeholder="Username"
           name="username"
           value={credentials.username}
           onChange={handleOnChange}
         />
       </div>
-      <div className='pass'>
+      <div>
         <label>Password</label>
         <input
           type="password"
+          placeholder="Password"
           name="password"
           value={credentials.password}
           onChange={handleOnChange}
         />
       </div>
-      <div className='submit'>
+      <div>
         <button type="submit" onClick={handleSignIn}>
-          LOG In
+          Sign In
         </button>
-      </div>
+      </div> </div>
     </form>
   );
 }

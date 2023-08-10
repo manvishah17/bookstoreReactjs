@@ -11,6 +11,7 @@ import SignIn from './pages/login';
 import { CartProvider } from './pages/CartContext';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
+// import  SignOut from "./pages/SignOut"
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
             <Route path="/Details/:productid" element={<Details />} />
             <Route path="/login" element={<SignIn />} />
             <Route path='/cart' element={<Cart/>} />
+            {/* < Route path='/Signout' element={<SignOut/>}/> */}
             <Route path ="/payment" element={<Checkout/>}/>
             <Route path="/*" element={<h1>error</h1>} />
           </Routes>
