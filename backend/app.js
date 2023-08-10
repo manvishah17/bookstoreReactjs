@@ -1,9 +1,8 @@
-  // // index.js (your backend entry file)
   const express = require('express');
   const cors = require('cors');
   const mongoose = require('mongoose');
-  const user = require('./userdetails'); // Assign the result of require to a variable
-  const app = express(); // Create an instance of Express
+  const user = require('./userdetails');
+  const app = express(); 
   const Jwt = require('jsonwebtoken');
   const JwtKey='E-commerce';
   app.use(express.json());
@@ -50,7 +49,6 @@
       res.status(500).json({ msg: 'Internal server error' });
     }
   });
-  // for login 
   app.post('/login', async (req, res) => {
     const { username, password } = req.body;
   
@@ -65,7 +63,6 @@
           return res.status(500).json({ msg: 'Token signing error' });
         }
         res.send({userObj,auth:token})
-        // return res.json({ msg: 'Successfully signed in', token });
       });
       
       
@@ -75,9 +72,6 @@
     }
   });
  
-
-  // ... (Start the server and other necessary code)
-
   app.listen(5000, () => {
     console.log('Server started on http://localhost:5000');
   });

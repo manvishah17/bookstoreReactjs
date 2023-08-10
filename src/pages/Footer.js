@@ -18,7 +18,7 @@ const Footer = () => {
           <hr className="w-100 clearfix d-md-none" />
           <MDBCol md="2" lg="2" xl="2" className="mx-auto mt-3">
             <h6 className="text-uppercase mb-4 font-weight-bold">
-              <strong>Products</strong>
+              <strong>About Us</strong>
             </h6>
             <p>
               <a href="#">BookWorld</a>  <br/>

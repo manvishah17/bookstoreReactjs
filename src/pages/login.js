@@ -20,7 +20,7 @@ function SignIn() {
       const response = await axios.post('http://localhost:5000/login', credentials);
 
       if (response && response.data) {
-        // Successful sign-in
+
         const { userObj, auth } = response.data;
         localStorage.setItem('user', JSON.stringify(userObj));
         localStorage.setItem('token', auth);

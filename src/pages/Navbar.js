@@ -45,14 +45,11 @@ function Nav({ products = [] }) {
       </form>
       <nav className="nav_links">
 
-        {/* <Link className="links" to="/login">Login</Link> */}
-        {/* <Link className="links" to="/signup">Signup</Link> */}
+       
         <Link to="/category" className="links">Category</Link>
         <Link className="links" to="/Cart">Cart</Link>
-        {/* <Link className="links" to="/SignOut"> SignOut</Link> */}
         {isAuthenticated ? (
 
-          // <button type="submit" onClick={handleLogout}>Logout</button>
           <Link to="/book" className="links" onClick={handleLogout}>Logout</Link>
 
         ) : (
