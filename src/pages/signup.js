@@ -49,6 +49,16 @@ function Signup() {
           placeholder="Enter password"
           onChange={handleOnChange}
         />
+        <div>
+        <label htmlFor="email" className='email'>Email:</label>
+        <input
+          type="text"
+          id="email"
+          name='email'
+          value={user.email}
+          placeholder='Email'
+          onChange={handleOnChange}
+        />
       </div>
       <div>
         <button type="submit" onClick={handleSubmit}>
@@ -57,7 +67,8 @@ function Signup() {
       </div>
       <p>
         Already registered? <Link to="/login">Sign In</Link>
-      </p> </div>
+      </p> </div>  
+      </div>
     </form>
   );
 }
