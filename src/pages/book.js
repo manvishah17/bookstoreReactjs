@@ -9,9 +9,9 @@ function Book() {
   const [clothesdata, setClothesdata] = useState([]);
   const { setCart } = useContext(CartContext);
   const [details, setDetails] = useState([]);
-  const addToCartHandler = (product) => {
+  function addToCartHandler(product) {
     setCart((prevCart) => [...prevCart, product]);
-  };
+  }
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/data?s=books').then((response) => {
