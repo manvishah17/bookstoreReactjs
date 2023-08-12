@@ -44,7 +44,7 @@ app.post('/Login',async(req,res)=>{
         console.log(res.msg)
         return res.status(404).json({msg: "Data not found"})
     }
-    // if(password === User.password)
+   
 
     if(password === User.password)
     {

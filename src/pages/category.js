@@ -3,7 +3,6 @@ import React, { useEffect, useState, useContext } from "react";
 import '../App.css';
 import { Link } from "react-router-dom";
 import { CartContext } from './CartContext' ;
-
 import { Carousel } from "react-bootstrap";
 import './category.css'
 function Category() {

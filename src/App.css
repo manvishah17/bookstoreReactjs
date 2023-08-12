@@ -3,7 +3,6 @@
   padding: 0%;
   content: none;
   margin: 0;
-
 }
 
 .App2 {
@@ -112,18 +111,9 @@ button:hover {
   background: linear-gradient(45deg, #D6E6F2, #A7CCE8);
   align-items: center;
 }
-
-
-
-
-
 .category-link {
   font-weight: bold;
 }
-
-
-
-
 .nav_links li {
   list-style: none;
 }
@@ -204,7 +194,6 @@ button:hover {
     background-position: 20vw;
   }
 }
-
 @media (max-width: 768px) {
   .card {
     width: 50%;
@@ -214,7 +203,6 @@ button:hover {
     border: 1px solid #ccc;
     margin-bottom: 1rem;
   }
-
 }
 
 .address {
