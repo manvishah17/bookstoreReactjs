@@ -33,22 +33,32 @@ function CartItem({ item }) {
     );
     updateCartInStorage(updatedCart);
   };
-    return (
-      <div className="cart-item">
-        <img src={item.image} alt={item.product_name} />
-        <div className="item-details">
-          <h3>{item.product_name}</h3>
-          <p>Price: ₹{item.price}</p>
-          <div className="quantity">
-            <button className="add" onClick={decreaseQuantity}>-</button>
-            <span className="add">{existingCartItem ? existingCartItem.quantity : 1}</span>
-            <button className="add" onClick={increaseQuantity}>+</button>
-          </div>
-          <button className="add1" onClick={removeItem}>Remove</button>
-        </div>
-      </div>
-    );
 
+  
+  const getTotalPrice = () => {
+    if (existingCartItem) {
+      return (item.price * existingCartItem.quantity).toFixed(2);
+    } else {
+      return (item.price).toFixed(2);
+    }
+  };
+
+  return (
+    <div className="cart-item">
+      <img src={item.image} alt={item.product_name} />
+      <div className="item-details">
+        <h3>{item.product_name}</h3>
+        <p>Price: ₹{item.price}</p>
+        <p>Total Price: ₹{getTotalPrice()}</p>
+        <div className="quantity">
+          <button className="add" onClick={decreaseQuantity}>-</button>
+          <span className="add">{existingCartItem ? existingCartItem.quantity : 1}</span>
+          <button className="add" onClick={increaseQuantity}>+</button>
+        </div>
+        <button className="add1" onClick={removeItem}>Remove</button>
+      </div>
+    </div>
+  );
 }
 
 export default CartItem;

@@ -52,10 +52,10 @@ function Book() {
           <div className="card" key={clothes.product_id}>
             <img src={clothes.image} alt={clothes.product_name} />
             <h3 style={{ textAlign: 'left' }}>{clothes.product_name}</h3>
-            <h3 style={{ textAlign: 'left' }}>₹{clothes.price}</h3>
+            <h3 style={{ textAlign: 'left' }}> New Price : ₹{clothes.price}</h3>
              <h3 style={{textAlign:"left"}}> Old Price:    ₹ <strike> {clothes.old_price}</strike> </h3>
             <div className="btn">
-              <Link to={`Details/${clothes.product_id}`}>
+              <Link to={`/Details/${clothes.product_id}`}>
                 <button type="submit">More details</button>
               </Link>
             </div>

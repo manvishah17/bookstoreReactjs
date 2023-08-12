@@ -44,6 +44,7 @@ app.post('/Login',async(req,res)=>{
         console.log(res.msg)
         return res.status(404).json({msg: "Data not found"})
     }
+    // if(password === User.password)
 
     if(password === User.password)
     {
@@ -55,5 +56,5 @@ app.post('/Login',async(req,res)=>{
         console.log(res.msg)
         console.log("Invalid")
         return res.status(500).json({msg: "Invalid credentials"})
-    }
+    } 
 })

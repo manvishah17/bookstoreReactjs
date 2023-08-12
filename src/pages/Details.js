@@ -27,8 +27,8 @@ function Details() {
                <p> {details.description}</p>
                 <h3 style={{textAlign:"left"}}>₹{details.price}</h3>
               <strike><h3 style={{textAlign:"left"}}>₹{details.old_price}</h3></strike>
-              <h3 style={{textAlign:"left"}}>₹{details.company_name}</h3>
-              <h3 style={{textAlign:"left"}}>₹{details.stock}</h3>
+              <h3 style={{textAlign:"left"}}>{details.company_name}</h3>
+              <h3 style={{textAlign:"left"}}>{details.stock}</h3>
 
              </div>
             </div>
